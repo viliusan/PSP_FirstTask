@@ -1,4 +1,4 @@
-package validator;
+package com.example.library.validator;
 
 public class NumberValidator {
     public boolean validateNumber(String number) {

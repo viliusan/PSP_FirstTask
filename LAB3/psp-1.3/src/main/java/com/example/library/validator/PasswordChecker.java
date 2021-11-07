@@ -1,6 +1,4 @@
-package validator;
-
-import java.util.List;
+package com.example.library.validator;
 
 public class PasswordChecker {
     private final static String passwordSpecialCharacterList = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";

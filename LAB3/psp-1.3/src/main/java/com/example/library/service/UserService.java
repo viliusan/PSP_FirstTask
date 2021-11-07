@@ -4,9 +4,9 @@ import com.example.library.model.User;
 import com.example.library.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import validator.EmailValidator;
-import validator.NumberValidator;
-import validator.PasswordChecker;
+import com.example.library.validator.EmailValidator;
+import com.example.library.validator.NumberValidator;
+import com.example.library.validator.PasswordChecker;
 
 import java.util.List;
 

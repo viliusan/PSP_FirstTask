@@ -1,4 +1,4 @@
-package validator;
+package com.example.library.validator;
 
 public class EmailValidator {
     public boolean validate(String email) {
