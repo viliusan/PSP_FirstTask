@@ -5,8 +5,6 @@ import com.example.library.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.library.validator.EmailValidator;
-import com.example.library.validator.NumberValidator;
-import com.example.library.validator.PasswordChecker;
 
 import java.util.List;
 
@@ -42,27 +40,27 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    private boolean validateFields(User user) {
-        EmailValidator emailValidator = new EmailValidator();
-        PasswordChecker passwordChecker = new PasswordChecker();
-        NumberValidator numberValidator = new NumberValidator();
-
-        var validatedEmail = emailValidator.validate(user.getEmail());
-        var validatedPassword = passwordChecker.validatePassword(user.getPassword());
-        var validatedNumber = numberValidator.validateNumber(user.getPhoneNumber());
-
-        if (!validatedEmail) {
-            System.out.println("ERROR. Bad email.");
-        }
-
-        if (!validatedPassword) {
-            System.out.println("ERROR. Bad password.");
-        }
-
-        if (!validatedNumber) {
-            System.out.println("ERROR. Bad phone number.");
-        }
-
-        return validatedEmail && validatedNumber && validatedPassword;
-    }
+//    private boolean validateFields(User user) {
+//        EmailValidator emailValidator = new EmailValidator();
+//        PasswordChecker passwordChecker = new PasswordChecker();
+//        NumberValidator numberValidator = new NumberValidator();
+//
+//        var validatedEmail = emailValidator.validate(user.getEmail());
+//        var validatedPassword = passwordChecker.validatePassword(user.getPassword());
+//        var validatedNumber = numberValidator.validateNumber(user.getPhoneNumber());
+//
+//        if (!validatedEmail) {
+//            System.out.println("ERROR. Bad email.");
+//        }
+//
+//        if (!validatedPassword) {
+//            System.out.println("ERROR. Bad password.");
+//        }
+//
+//        if (!validatedNumber) {
+//            System.out.println("ERROR. Bad phone number.");
+//        }
+//
+//        return validatedEmail && validatedNumber && validatedPassword;
+//    }
 }
